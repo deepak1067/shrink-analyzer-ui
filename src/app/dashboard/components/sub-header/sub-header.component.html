@@ -1,0 +1,101 @@
+<div class="px-5">
+<div class="d-flex justify-content-between align-items-center p-4">
+    <div class="d-flex flex-wrap mt-3">
+        <div class="d-flex">
+        <h1 class="page-title mt-2 me-1">{{ pageTitle | translate }}
+            <span *ngIf="pageTitle === 'BULK SHRINK EVENTS' && totalBulkEvent !== undefined ">-&nbsp;{{totalBulkEvent}}</span>
+        </h1> 
+        </div>
+        <div class="d-flex mt-2" *ngIf="pageTitle === 'SHRINK VISIBILITY'">
+            <button class="refresh-button" (click)="refreshData()">
+                <img src="assets/svg/Refresh.svg" alt="refresh_icon" height="40" width="40">
+            </button>
+            <div class="last-refreshed me-2">
+                Last Shrink Data Refreshed
+                <p class="last-refreshed-time">
+                    <span>{{ lastShrinkDataRefreshed }}</span>
+                </p>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="last-uploaded">
+                {{'Last POS Uploaded' | translate}}
+                <p class="last-pos-time">
+                    <span>{{ lastPosUploaded }}</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="d-flex align-items-end ">
+        <div class="d-flex justify-content-end align-items-center flex-wrap">
+            <div class="d-flex mt-3">
+                <div class="last-refreshed me-2">
+                    <p class="mb-0">Filter Start Date</p>
+                    <p class="last-refreshed-time">
+                        <span>{{ startDate }}</span>
+                    </p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="last-uploaded">
+                    <p class="mb-0"> Filter End Date</p>
+                    <p class="last-pos-time">
+                        <span>{{ endDate }}</span>
+                    </p>
+                </div>
+            </div>
+           <div class="d-flex flex-column">
+            <div>
+                <span class="no-filter-text" *ngIf="!filterApplied">No filter applied</span>
+            </div>
+            <div class="d-flex">
+                <button mat-flat-button class="filter-button d-flex align-items-center ms-3" (click)="onFilterClick()">                
+                    <span class="d-flex align-items-center">
+                        <img src="assets/svg/filter.svg" alt="filter" height="16" width="16" class="me-2">
+                        FILTER 
+                        <i class="material-icons ms-2">expand_more</i></span>
+                </button>
+                <div class="filter-applied-icon d-flex align-items-center ps-3 pe-2">
+                    <img *ngIf="!filterApplied" src="assets/svg/Filter_NA.svg" alt="no-filter" height="20" width="20">
+                    <img *ngIf="filterApplied" src="assets/svg/filter_applied.svg" alt="filter" height="20" width="20">
+                </div>
+            </div>
+            
+           </div>
+           
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- <div class="d-flex justify-content-between align-items-center p-4 global-filter">
+    <div class="d-flex flex-column">
+        <div>
+            <span class="no-filter-text" *ngIf="!filterApplied">No filter applied</span>
+        </div>
+        <div class="d-flex justify-content-end align-items-center">
+            <div class="last-refreshed">
+                <p class="mb-0">Filter Start Date</p>
+                <p class="last-refreshed-time">
+                    <span>{{ startDate }}</span>
+                </p>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="last-uploaded">
+                <p class="mb-0"> Filter End Date</p>
+                <p class="last-pos-time">
+                    <span>{{ endDate }}</span>
+                </p>
+            </div>
+            <button mat-flat-button class="filter-button d-flex align-items-center ms-3" (click)="onFilterClick()">                
+                <span class="d-flex align-items-center">
+                    <img src="assets/svg/filter.svg" alt="filter" height="16" width="16" class="me-2">
+                    FILTER 
+                    <i class="material-icons ms-2">expand_more</i></span>
+            </button>
+            <div class="filter-applied-icon d-flex align-items-center ps-3 pe-2">
+                <img *ngIf="!filterApplied" src="assets/svg/Filter_NA.svg" alt="no-filter" height="20" width="20">
+                <img *ngIf="filterApplied" src="assets/svg/filter_applied.svg" alt="filter" height="20" width="20">
+            </div>
+        </div>
+    </div>
+    </div> -->

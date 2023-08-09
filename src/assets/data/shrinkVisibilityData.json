@@ -1,0 +1,16 @@
+{
+  "shrink-item-ratio": 0.81,
+  "shrink-value": {
+    "amount": 934.3,
+    "currency": "EUR"
+  },
+  "shrink-event-bulk-ratio": 0.55,
+  "exit-items": {
+    "count": 92,
+    "trend": 17.44
+  },
+  "refresh": {
+    "last-exit-event-time": 1662994787,
+    "last-pos-event-time": 1626942862
+  }
+}

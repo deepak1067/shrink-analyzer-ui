@@ -1,0 +1,26 @@
+<div class="mx-5">
+  <section class="d-flex justify-content-start flex-wrap mb-3 mt-2">
+    <mat-form-field appearance="outline">
+      <mat-select multiple #matSelect (selectionChange)="onColumnSelectionChange($event, matSelect)" [(value)]="columnIds">
+        <mat-option *ngFor="let header of tableHeaders" [value]="header.colId" [disabled]="columnIds.length <= 2 && columnIds.includes(header.colId || '')">
+          {{ header.headerName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </section>
+  <ag-grid-angular
+      class="ag-theme-alpine table-view"
+      [style.height]="(tableHeaders.length>7) ? '580px' : '565px'"
+      [columnDefs]="tableHeaders"
+      [defaultColDef]="defaultColDef"
+      [rowData]="tableRows"
+      [pagination]="tableRows?.length >= 10 "
+      [paginationPageSize]=10
+      [suppressDragLeaveHidesColumns]="true"
+      [overlayLoadingTemplate]="overlayLoadingTemplate"
+      [overlayNoRowsTemplate]="overlayNoRowsTemplate"
+      [autoGroupColumnDef]="autoGroupColumnDef"
+      (cellClicked)="onCellClicked($event.data, $event.colDef.colId)"
+  ></ag-grid-angular>
+</div>
+

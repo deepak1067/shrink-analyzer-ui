@@ -1,0 +1,43 @@
+.mat-button-toggle-group {
+  .mat-button-toggle {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #00539e !important;
+    .icon {
+      font-size: 21px;
+      bottom: -5.5px;
+      left: 2px;
+      position: absolute; 
+      color: #666666;
+    }
+  }
+}
+.mat-button-toggle-group .mat-button-toggle-checked {
+  background-color: #00539e;
+  .icon {
+    color: #ffffff;
+  }
+}
+.mat-button-toggle-group-appearance-standard {
+  border-radius: 2%;
+}
+
+.mat-button-toggle {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #00539e !important;
+  .icon {
+    font-size: 21px;
+    bottom: -5.5px;
+    left: 2px;
+    position: absolute; 
+    color: #00539e;
+  }
+}
+.mat-button-toggle-standalone.mat-button-toggle-appearance-standard {
+  border-radius: 2%;
+}

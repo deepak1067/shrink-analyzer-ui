@@ -1,0 +1,47 @@
+<mat-card class="mt-5 p-4">
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            <h4 class="fw-bold">HIGHEST SHRINK BY SITES</h4>
+        </div>
+        <div>
+            <app-toggle-button
+              (toggleValue)="onToggleClick($event)"
+              (onDownload)="downloadFile($event)"
+              [viewType]="viewType"
+              [showMapIcon]="true"></app-toggle-button>
+        </div>
+    </div>
+    <div *ngIf="viewType === 'table'">
+        <app-tabular-view [tableRows]="shrinkEventsBySite"
+            [tableHeaders]="eventColumnDef"></app-tabular-view>
+    </div>
+    <div *ngIf="viewType === 'map'">
+        <ng-container *ngIf="!isLoading; else showLoading">
+            <app-map-view [mapData]="mapData"
+            (mapId)="getMapId($event)"></app-map-view>
+        </ng-container>
+        <ng-template #showLoading>
+            <div class="spinner mt-5">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="sr-only"></span>
+                </div>
+              </div>
+        </ng-template>
+        
+    </div>
+    <div *ngIf="viewType === 'chart'">
+        <div *ngIf="isLoading" class="text-center mt-5">
+            <div class="spinner-border text-primary " role="status">
+                <span class="sr-only"></span>
+            </div>
+        </div>
+    
+        <div *ngIf="!isLoading">
+            <div class="container mt-5 col-xxl-8">
+                <app-highest-shrink-bar-chart [barChartData]="shrinkEventsBySite"
+                    (sendChartId)="getChartId($event)">
+                </app-highest-shrink-bar-chart>
+            </div>
+        </div>
+    </div>
+</mat-card>

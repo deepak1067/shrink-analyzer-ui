@@ -1,0 +1,48 @@
+<mat-card class="mt-5">
+  <mat-tab-group
+    animationDuration="0ms"
+    [selectedIndex]="selectedTabId"
+    (selectedIndexChange)="onTabChange($event)"
+  >
+    <ng-container *ngFor="let tab of subTabs; let index = index">
+      <mat-tab [label]="tab.name">
+        <div class="container mt-4 mb-4">
+          <div class="mx-2 d-flex justify-content-end">
+            <app-toggle-button
+              (toggleValue)="onToggle($event)"
+              (onDownload)="downloadFile($event, selectedTabId)"
+              [viewType]="viewType"
+            ></app-toggle-button>
+          </div>
+          <ng-container *ngIf="!isLoading; else showLoading">
+            <ng-container *ngIf="viewType === 'chart'; else elseTemplate">
+              <div
+                class="mt-5"
+                [ngClass]="{'container col-10 col-xxl-8 col-lg-12 col-md-12 col-sm-1':index === 0, 'mx-2':index === 1 }"
+              >
+                <app-shrink-bar-chart
+                  [barChartData]="shrinkEventData"
+                  [isEventByDay]="selectedTabId"
+                  (sendChartId)="getChartId($event)"
+                ></app-shrink-bar-chart>
+              </div>
+            </ng-container>
+            <ng-template #elseTemplate>
+              <app-tabular-view
+                [tableRows]="shrinkEventData"
+                [tableHeaders]="eventColumnDef"
+              ></app-tabular-view>
+            </ng-template>
+          </ng-container>
+          <ng-template #showLoading>
+            <div class="spinner mt-5">
+              <div class="spinner-border text-primary" role="status">
+                <span class="sr-only"></span>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </mat-tab>
+    </ng-container>
+  </mat-tab-group>
+</mat-card>

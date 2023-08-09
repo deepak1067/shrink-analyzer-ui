@@ -1,0 +1,126 @@
+.page-title {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+  align-items: center;
+}
+
+.last-refreshed {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #000;
+  margin-right: 10px;
+  padding-left: 10px
+}
+
+.refresh-button {
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.last-refreshed-time {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: left;
+  color: #000;
+}
+
+.last-uploaded {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #000;
+  padding-left: 10px
+}
+
+.last-pos-time {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: left;
+  color: #000;
+  margin-right: 10px;
+}
+
+.vertical-line {
+  margin-top: -13px;
+  display: inline-block;
+  height: 28px;
+  background: #00539E;
+  border: 1px solid #00539E
+}
+
+.card {
+  border-radius: 5px;
+  border: none;
+  width: 280px;
+  height: 120px;
+  padding: 10px;
+  margin: 10px;
+  background: #FFF;
+  box-shadow: 0 0 12px 0 #00000024
+}
+
+.text {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.results {
+  font-family: Montserrat;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+
+.arrow {
+  right: 6px;
+  position: absolute;
+  margin-top: -40.5px
+}
+
+.trend-percentage {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+
+.filter-button {
+  border-radius: 20px;
+  background-color: #07539e !important;
+  color: #ffffff !important;
+}
+
+.filter-applied-icon {
+  background-color: white;
+  margin-left: -12px;
+  padding: 0 3px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 1px solid #07539e;
+  height: 35px;
+}
+
+.no-filter-text{
+  font-size: 15px;
+  color: red;
+  float: right;
+}

@@ -1,0 +1,60 @@
+#sidenavContainer {
+    margin-top: 64px;
+}
+
+#sidenav {
+    width: 270px;
+    background: #076599;
+}
+
+#sidenav.menu-close {
+    width: 80px
+}
+#sidenav.menu-open {
+    width: 270px
+}
+:host ::ng-deep .mdc-list-item__primary-text {
+  color: #ffffff !important;
+}
+.nav-item{
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+.nav-title{
+    font-family: Montserrat;
+    font-size: 14px;
+    letter-spacing: 0px;
+    font-weight: 400;
+}
+.active{
+    background-color: #003F78;
+    .nav-title{
+    color: #F8F8F8;
+    font-weight: 500;
+    }
+}
+.footer{
+    position: absolute;
+    bottom: 15px;
+    right: 21px;
+    color: #ffffff;
+    cursor: pointer;
+}
+#toolbarMenu{
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+}
+.nav-icon{
+    height: 30px;
+    width: 30px;
+    background: #ffffff;
+    color: #00539E;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    padding: 4px;
+}

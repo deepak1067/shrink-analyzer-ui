@@ -1,0 +1,146 @@
+[
+  {
+    "hour-of-day": 0,
+    "shrink-event-count": 503,
+    "bulk-event-count": 226,
+    "sweetheart-count": 347
+  },
+  {
+    "hour-of-day": 1,
+    "shrink-event-count": 357,
+    "bulk-event-count": 148,
+    "sweetheart-count": 987
+  },
+  {
+    "hour-of-day": 2,
+    "shrink-event-count": 36,
+    "bulk-event-count": 435,
+    "sweetheart-count": 61
+  },
+  {
+    "hour-of-day": 3,
+    "shrink-event-count": 478,
+    "bulk-event-count": 212,
+    "sweetheart-count": 93
+  },
+  {
+    "hour-of-day": 4,
+    "shrink-event-count": 60,
+    "bulk-event-count": 976,
+    "sweetheart-count": 725
+  },
+  {
+    "hour-of-day": 5,
+    "shrink-event-count": 832,
+    "bulk-event-count": 213,
+    "sweetheart-count": 607
+  },
+  {
+    "hour-of-day": 6,
+    "shrink-event-count": 383,
+    "bulk-event-count": 287,
+    "sweetheart-count": 700
+  },
+  {
+    "hour-of-day": 7,
+    "shrink-event-count": 890,
+    "bulk-event-count": 185,
+    "sweetheart-count": 465
+  },
+  {
+    "hour-of-day": 8,
+    "shrink-event-count": 962,
+    "bulk-event-count": 791,
+    "sweetheart-count": 13
+  },
+  {
+    "hour-of-day": 9,
+    "shrink-event-count": 914,
+    "bulk-event-count": 553,
+    "sweetheart-count": 95
+  },
+  {
+    "hour-of-day": 10,
+    "shrink-event-count": 159,
+    "bulk-event-count": 397,
+    "sweetheart-count": 120
+  },
+  {
+    "hour-of-day": 11,
+    "shrink-event-count": 96,
+    "bulk-event-count": 765,
+    "sweetheart-count": 269
+  },
+  {
+    "hour-of-day": 12,
+    "shrink-event-count": 884,
+    "bulk-event-count": 829,
+    "sweetheart-count": 605
+  },
+  {
+    "hour-of-day": 13,
+    "shrink-event-count": 21,
+    "bulk-event-count": 221,
+    "sweetheart-count": 30
+  },
+  {
+    "hour-of-day": 14,
+    "shrink-event-count": 326,
+    "bulk-event-count": 866,
+    "sweetheart-count": 304
+  },
+  {
+    "hour-of-day": 15,
+    "shrink-event-count": 895,
+    "bulk-event-count": 978,
+    "sweetheart-count": 276
+  },
+  {
+    "hour-of-day": 16,
+    "shrink-event-count": 857,
+    "bulk-event-count": 812,
+    "sweetheart-count": 298
+  },
+  {
+    "hour-of-day": 17,
+    "shrink-event-count": 135,
+    "bulk-event-count": 359,
+    "sweetheart-count": 599
+  },
+  {
+    "hour-of-day": 18,
+    "shrink-event-count": 417,
+    "bulk-event-count": 570,
+    "sweetheart-count": 415
+  },
+  {
+    "hour-of-day": 19,
+    "shrink-event-count": 883,
+    "bulk-event-count": 774,
+    "sweetheart-count": 33
+  },
+  {
+    "hour-of-day": 20,
+    "shrink-event-count": 295,
+    "bulk-event-count": 518,
+    "sweetheart-count": 735
+  },
+  {
+    "hour-of-day": 21,
+    "shrink-event-count": 16,
+    "bulk-event-count": 725,
+    "sweetheart-count": 57
+  },
+  {
+    "hour-of-day": 22,
+    "shrink-event-count": 425,
+    "bulk-event-count": 188,
+    "sweetheart-count": 527
+  },
+  {
+    "hour-of-day": 23,
+    "shrink-event-count": 991,
+    "bulk-event-count": 946,
+    "sweetheart-count": 817
+  }
+]

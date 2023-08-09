@@ -1,0 +1,20 @@
+@import '../assets/sass/core';
+
+.loader-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .spinner-border {
+    border-right-color: $primary-color;
+    height: 5rem;
+    width: 5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin: 0 1rem;
+  }
+}

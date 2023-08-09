@@ -1,0 +1,31 @@
+<mat-sidenav-container
+    id="sidenavContainer"
+   fullscreen>
+    <mat-sidenav
+      mode="side"
+      #sidenav
+      id="sidenav"
+      [class.menu-open]="isMenuOpen"
+      [class.menu-close]="!isMenuOpen"
+      opened>
+      <mat-nav-list>
+        <a *ngFor="let menuItem of menuItems" [routerLink]="menuItem.path" mat-list-item [class.active]="checkRouteActive(menuItem.path)" class="nav-item d-flex flex-row" >
+          <div class="nav-icon"  [ngClass]="{'d-none':isMenuOpen}" >{{ menuItem.icon }}</div>
+          <span class="nav-title ps-2" [ngClass]="{'d-none':!isMenuOpen}">{{ menuItem.label }}</span>
+        </a>
+      </mat-nav-list>
+      <div class="footer">
+          <mat-icon
+        (click)="onToolbarMenuToggle()"
+        id="toolbarMenu">{{arrowIcon}}</mat-icon>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content
+    [ngStyle]="{ 'margin-left.px': contentMargin }"
+    >
+    <div class="ps-5 pe-3 mt-3">
+      <app-sub-header></app-sub-header>
+      <ng-content></ng-content>
+    </div>
+  </mat-sidenav-content>
+  </mat-sidenav-container>

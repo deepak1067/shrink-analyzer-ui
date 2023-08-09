@@ -1,0 +1,243 @@
+<div class="d-flex justify-content-between align-items-center filter-container mt-4">
+    <div>
+        <h1>FILTER</h1>
+    </div>
+    <div class="d-flex justify-content-end p-4 app-buttons">
+        <button mat-flat-button class="mx-1 filled-button" (click)="clearFilter()">
+            {{ "Clear Filter" | uppercase }}
+        </button>
+        <button mat-flat-button class="mx-1 filled-button" type="submit" (click)="onFormSubmit()">
+            {{ "Apply Filter" | uppercase }}
+        </button>
+        <button mat-flat-button class="mx-1 outlined-button" mat-dialog-close>
+            <span class="d-flex align-items-center">Close<i class="material-icons">close</i></span>
+        </button>
+    </div>
+</div>
+<div class="filter-container d-flex col-12 justify-content-around mt-5 mb-5">
+    <div class="col-9">
+        <form [formGroup]="filterForm">
+            <div class="chip-list-wrapper">
+
+            </div>
+            <div class="row">
+                <div class="col-4 pe-5">
+                    <div>
+                        <span class="form-label">Date</span>
+                    </div>
+                    <mat-form-field class="date-picker">
+                        <mat-date-range-input [rangePicker]="picker" >
+                            <input matStartDate formControlName="startDate" placeholder="Start Date"  [readOnly]="true"/>
+                            <input matEndDate formControlName="endDate" placeholder="End Date"   [readOnly]="true"/>
+                        </mat-date-range-input>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-date-range-picker #picker [disabled]="false"></mat-date-range-picker>
+                    </mat-form-field>
+                    <span class = "error-message w-100"
+                          *ngIf="(filterForm.get('endDate')?.errors && filterForm.get('endDate')?.touched )
+                          || (filterForm.get('startDate')?.errors && filterForm.get('startDate')?.touched)">Please select start and end Date</span>
+                </div>
+                <div class="col-4">
+                    <div>
+                        <span class="form-label">Site ID</span>
+                    </div>
+                    <mat-form-field class="fields">
+                        <mat-chip-grid #matChipGidSite aria-label="Site selection">
+                            <mat-chip-option
+                                    *ngFor="let siteCode of siteCodesSelected"
+                                    [selectable]="selectable"
+                                    [removable]="removable"
+                                    (removed)="removeSiteCode(siteCode)">
+                                {{siteCode}}
+                                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                            </mat-chip-option>
+
+
+                            <input
+                                    placeholder="select site code.."
+                                    #siteCodeInput
+                                    #autocompleteTriggerSite="matAutocompleteTrigger"
+                                    formControlName="siteCode"
+                                    [matAutocomplete]="siteCodeAutoComplete"
+                                    [matChipInputFor]="matChipGidSite"
+                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                    (matChipInputTokenEnd)="addSiteDataForSiteCode($event)"/>
+                        </mat-chip-grid>
+
+
+                        <mat-autocomplete #siteCodeAutoComplete="matAutocomplete" (optionSelected)="selectedSiteCode($event)"
+                                          autoActiveFirstOption>
+                            <mat-option *ngFor="let siteCode of filteredSiteCodeOptions | async" [value]="siteCode">
+                                <mat-checkbox color="primary" style="padding: 0 12px;"
+                                              [checked]="siteCodesSelected.indexOf(siteCode) >= 0"></mat-checkbox>
+                                {{siteCode}}
+                            </mat-option>
+
+                        </mat-autocomplete>
+
+                    </mat-form-field>
+                </div>
+
+
+                <div class="col-4">
+                    <div>
+                        <span class="form-label">Site Hierarchy</span>
+                    </div>
+
+
+                    <mat-form-field class="hierarchy-field">
+
+                        <mat-chip-grid #matChipGrid aria-label="site selection">
+                            <mat-chip-option
+                                    *ngFor="let hierarchy of siteHierarchySelected"
+                                    [selectable]="selectable"
+                                    [removable]="removable"
+                                    (removed)="removeSiteHierarchy(hierarchy)">
+                                {{hierarchy}}
+                                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                            </mat-chip-option>
+
+
+                            <input
+                                    placeholder="select hierarchy.."
+                                    #hierarchyInput
+                                    #autocompleteTrigger="matAutocompleteTrigger"
+                                    formControlName="hierarchy"
+                                    [matAutocomplete]="hierarchyAutoComplete"
+                                    [matChipInputFor]="matChipGrid"
+                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                    (matChipInputTokenEnd)="addSiteDataForSiteHierarchy($event)"/>
+                        </mat-chip-grid>
+
+
+                        <mat-autocomplete #hierarchyAutoComplete="matAutocomplete" (optionSelected)="selectedSiteHierarchy($event)"
+                                          autoActiveFirstOption>
+                            <mat-option *ngFor="let hierarchy of filteredHierarchyOptions | async" [value]="hierarchy">
+                                <mat-checkbox color="primary" style="padding: 0 12px;"
+                                              [checked]="siteHierarchySelected.indexOf(hierarchy) >= 0"></mat-checkbox>
+                                {{hierarchy}}
+                            </mat-option>
+                        </mat-autocomplete>
+
+                    </mat-form-field>
+
+                </div>
+                <div class="col-4">
+                    <div>
+                        <span class="form-label">Hours</span>
+                    </div>
+                    <mat-slider
+                    class="example-margin hour-slider"
+                    [max]="max"
+                    [min]="min"
+                    [step]="step"
+                    [discrete]="true"
+                    >
+                  <input formControlName="startTime" matSliderStartThumb>
+                  <input formControlName="endTime" matSliderEndThumb>
+                </mat-slider>
+                </div>
+                <div class="col-4">
+                    <div>
+                        <span class="form-label">Site Name</span>
+                    </div>
+                    <mat-form-field class="fields">
+                        <mat-chip-grid #matChipGidSiteName aria-label="Site Name selection">
+                            <mat-chip-option
+                                    *ngFor="let siteName of siteNamesSelected"
+                                    [selectable]="selectable"
+                                    [removable]="removable"
+                                    (removed)="removeSiteName(siteName)">
+                                {{siteName}}
+                                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                            </mat-chip-option>
+
+
+                            <input
+                                    placeholder="select site Name.."
+                                    #siteNameInput
+                                    #autocompleteTriggerSiteName="matAutocompleteTrigger"
+                                    formControlName="siteName"
+                                    [matAutocomplete]="siteNameAutoComplete"
+                                    [matChipInputFor]="matChipGidSiteName"
+                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                    (matChipInputTokenEnd)="addSiteDataForSiteName($event)"/>
+                        </mat-chip-grid>
+
+
+                        <mat-autocomplete #siteNameAutoComplete="matAutocomplete" (optionSelected)="selectedSiteName($event)"
+                                          autoActiveFirstOption>
+                            <mat-option *ngFor="let siteName of filteredSiteNameOptions | async" [value]="siteName">
+                                <mat-checkbox color="primary" style="padding: 0 12px;"
+                                              [checked]="siteNamesSelected.indexOf(siteName) >= 0"></mat-checkbox>
+                                {{siteName}}
+                            </mat-option>
+
+                        </mat-autocomplete>
+
+                    </mat-form-field>
+                </div>
+                <div class="col-4">
+                    <div>
+                        <span class="form-label">Site Label</span>
+                    </div>
+                    <mat-form-field class="fields">
+                        <mat-chip-grid #matChipGidSiteLabel aria-label="Site label selection">
+                            <mat-chip-option
+                                    *ngFor="let siteLabel of siteLabelsSelected"
+                                    [selectable]="selectable"
+                                    [removable]="removable"
+                                    (removed)="removeSiteLabel(siteLabel)">
+                                {{siteLabel}}
+                                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                            </mat-chip-option>
+
+
+                            <input
+                                    placeholder="select site label.."
+                                    #siteLabelInput
+                                    #autocompleteTriggerLabel="matAutocompleteTrigger"
+                                    formControlName="siteLabel"
+                                    [matAutocomplete]="siteLabelAutoComplete"
+                                    [matChipInputFor]="matChipGidSiteLabel"
+                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                    (matChipInputTokenEnd)="addSiteDataForSiteLabel($event)"/>
+                        </mat-chip-grid>
+
+
+                        <mat-autocomplete #siteLabelAutoComplete="matAutocomplete" (optionSelected)="selectedSiteLabel($event)"
+                                          autoActiveFirstOption>
+                            <mat-option *ngFor="let siteLabel of filteredSiteLabelOptions | async" [value]="siteLabel">
+                                <mat-checkbox color="primary" style="padding: 0 12px;"
+                                              [checked]="siteLabelsSelected.indexOf(siteLabel) >= 0"></mat-checkbox>
+                                {{siteLabel}}
+                            </mat-option>
+
+                        </mat-autocomplete>
+
+                    </mat-form-field>
+                </div>
+
+
+                <div class="col-12">
+                    <div class="col-4 float">
+                        <div>
+                            <div>
+                                <span class="form-label">Event Label(s)</span>
+                            </div>
+                            <mat-form-field class="fields">
+                            <mat-select formControlName="itemLabel" multiple placeholder="If any value">
+                                <mat-option *ngFor="let eventLabel of eventLabels" [value]="eventLabel">{{eventLabel}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-3 d-flex align-items-center justify-content-end">
+        <mat-slide-toggle color="primary" (change)="onChange($event)" [(ngModel)]="isChecked"></mat-slide-toggle>
+        <span class="fw-bold form-label mt-2">Exclude Not in Catalog Product Code</span>
+    </div>
+</div>

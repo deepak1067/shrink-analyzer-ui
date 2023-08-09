@@ -1,0 +1,13 @@
+<section class="shrink-tabs p-4">
+<div>
+  <nav mat-tab-nav-bar color="primary" [tabPanel]="tabPanel">
+    <a mat-tab-link *ngFor="let tabItem of shrinkTabs" [routerLink]="tabItem.url" routerLinkActive #rla="routerLinkActive"
+    [routerLinkActiveOptions]="matchOptions"  [active]="rla.isActive">
+      <span id="navstepstext">{{tabItem.tabName}}</span>    
+    </a>
+  </nav>
+  <mat-tab-nav-panel #tabPanel class="tab-body">
+    <router-outlet></router-outlet>
+  </mat-tab-nav-panel>
+  </div>
+</section> 

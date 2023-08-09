@@ -1,0 +1,47 @@
+<section>
+  <span  *ngFor="let action of bulkEventActions" class="status">
+  <div  *ngIf="action.name === bulkEventCellValue?.data?.Status" >
+    <img 
+    [src]="action.icon" 
+    alt="action"
+    height="22" 
+    width="22" 
+    [matTooltip]="action.name"/>
+    </div>
+  </span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="action">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <a mat-menu-item [href]="bulkEventCellValue?.data['Video URL']" target=”_blank”>
+      <div class="d-flex justify-content-between"> 
+        <div class="me-1">
+          <img src="assets/svg/videocam.svg" alt="video" height="30" width="30"
+          />
+          <span class="ms-2 video-text">Play Video</span>
+        </div>
+        <img src="assets/svg/play_circle_filled.svg"  alt="play_icon" height="26" width="26" class="ms-5" 
+          matTooltip="Play Video"
+        />
+      </div>
+    </a>
+    <hr class="m-0" />
+    <mat-radio-group
+      class="example-radio-group d-flex flex-column m-2"
+    >
+      <mat-radio-button
+        class="example-radio-button"
+        color="primary"
+        *ngFor="let action of bulkEventActions"
+        [value]="action.name"
+        [checked]="action.name === bulkEventCellValue?.data?.Status"
+        (change)="onUpdateAction($event, bulkEventCellValue?.data['Event ID'])"
+      >
+        <div class="d-flex justify-content-between options py-2">
+          <span> {{ action.name }}</span>
+          <img [src]="action.icon" alt="action" height="22" width="22" />
+        </div>
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-menu>
+</section>

@@ -1,0 +1,33 @@
+.mat-mdc-card {
+  border-radius: 8px;
+  max-height: 800px;
+  min-height: 600px;
+  box-shadow: 0px 0px 10px 0px #9b9b9b, 0 1px 1px 0 #9b9b9b, 0 1px 1px 0 #9b9b9b;
+}
+:host ::ng-deep
+  .mdc-text-field--no-label:not(.mdc-text-field--outlined):not(
+    .mdc-text-field--textarea
+  )
+  .mat-mdc-form-field-infix {
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+:host ::ng-deep .mat-mdc-text-field-wrapper {
+  height: 35px;
+}
+:host ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background: transparent;
+}
+:host ::ng-deep .mdc-text-field {
+  padding: 0px 3px;
+}
+
+.label,
+.select,
+.options {
+  font-size: 15px;
+  color: #333333;
+  font-family: Montserrat;
+  letter-spacing: 0;
+  font-weight: 500;
+}

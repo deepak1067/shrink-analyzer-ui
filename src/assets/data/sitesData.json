@@ -1,0 +1,501 @@
+[
+  {
+    "code": "SiteCode1",
+    "name": "Site Name 1",
+    "timezone": "Asia/Jakarta",
+    "geo-location": {
+      "hierarchy": "Asia/Jakarta/Sapat",
+      "coordinates": {
+        "latitude": -0.3372032,
+        "longitude": 103.3702811
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3",
+      "Label 4"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      },
+      {
+        "id": 2,
+        "name": "Exit Door 2"
+      },
+      {
+        "id": 3,
+        "name": "Exit Door 3"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode2",
+    "name": "Site Name 2",
+    "timezone": "Asia/Yekaterinburg",
+    "geo-location": {
+      "hierarchy": "Asia/Yekaterinburg/Pokrovskoye",
+      "coordinates": {
+        "latitude": 57.3579277,
+        "longitude": 61.6905815
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3",
+      "Label 4",
+      "Label 5",
+      "Label 6",
+      "Label 7"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode3",
+    "name": "Site Name 3",
+    "timezone": "Asia/Chongqing",
+    "geo-location": {
+      "hierarchy": "Asia/Chongqing/Bayan",
+      "coordinates": {
+        "latitude": 46.085536,
+        "longitude": 127.403337
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3",
+      "Label 4",
+      "Label 5",
+      "Label 6",
+      "Label 7"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      },
+      {
+        "id": 2,
+        "name": "Exit Door 2"
+      },
+      {
+        "id": 3,
+        "name": "Exit Door 3"
+      },
+      {
+        "id": 4,
+        "name": "Exit Door 4"
+      },
+      {
+        "id": 5,
+        "name": "Exit Door 5"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode4",
+    "name": "Site Name 4",
+    "timezone": "America/Havana",
+    "geo-location": {
+      "hierarchy": "America/Havana/Cauto Cristo",
+      "coordinates": {
+        "latitude": 20.5550408,
+        "longitude": -76.4707684
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      },
+      {
+        "id": 2,
+        "name": "Exit Door 2"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode5",
+    "name": "Site Name 5",
+    "timezone": "Asia/Chongqing",
+    "geo-location": {
+      "hierarchy": "Asia/Chongqing/Zhongshu",
+      "coordinates": {
+        "latitude": 22.517585,
+        "longitude": 113.39277
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      },
+      {
+        "id": 2,
+        "name": "Exit Door 2"
+      },
+      {
+        "id": 3,
+        "name": "Exit Door 3"
+      },
+      {
+        "id": 4,
+        "name": "Exit Door 4"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode6",
+    "name": "Site Name 6",
+    "timezone": "Asia/Yekaterinburg",
+    "geo-location": {
+      "hierarchy": "Asia/Yekaterinburg/Talitsa",
+      "coordinates": {
+        "latitude": 56.8810476,
+        "longitude": 60.0156754
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3",
+      "Label 4",
+      "Label 5",
+      "Label 6"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      },
+      {
+        "id": 2,
+        "name": "Exit Door 2"
+      },
+      {
+        "id": 3,
+        "name": "Exit Door 3"
+      },
+      {
+        "id": 4,
+        "name": "Exit Door 4"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode7",
+    "name": "Site Name 7",
+    "timezone": "Europe/Prague",
+    "geo-location": {
+      "hierarchy": "Europe/Prague/Dobšice",
+      "coordinates": {
+        "latitude": 48.8489882,
+        "longitude": 16.0910758
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3",
+      "Label 4",
+      "Label 5",
+      "Label 6",
+      "Label 7"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      },
+      {
+        "id": 2,
+        "name": "Exit Door 2"
+      },
+      {
+        "id": 3,
+        "name": "Exit Door 3"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode8",
+    "name": "SIte Name 8",
+    "timezone": "Asia/Jakarta",
+    "geo-location": {
+      "hierarchy": "Asia/Jakarta/Rancapanjang",
+      "coordinates": {
+        "latitude": -7.0180991,
+        "longitude": 107.7632453
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3",
+      "Label 4",
+      "Label 5",
+      "Label 6"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      },
+      {
+        "id": 2,
+        "name": "Exit Door 2"
+      },
+      {
+        "id": 3,
+        "name": "Exit Door 3"
+      },
+      {
+        "id": 4,
+        "name": "Exit Door 4"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode9",
+    "name": "Site Name 9",
+    "timezone": "Europe/Stockholm",
+    "geo-location": {
+      "hierarchy": "Europe/Stockholm/Luleå",
+      "coordinates": {
+        "latitude": 67.1356306,
+        "longitude": 20.6831751
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3",
+      "Label 4",
+      "Label 5",
+      "Label 6"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      },
+      {
+        "id": 2,
+        "name": "Exit Door 2"
+      },
+      {
+        "id": 3,
+        "name": "Exit Door 3"
+      },
+      {
+        "id": 4,
+        "name": "Exit Door 4"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode10",
+    "name": "Site Name 10",
+    "timezone": "Indian/Antananarivo",
+    "geo-location": {
+      "hierarchy": "Indian/Antananarivo/Mananjary",
+      "coordinates": {
+        "latitude": -21.2245142,
+        "longitude": 48.3464426
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3",
+      "Label 4"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode11",
+    "name": "Site Name 11",
+    "timezone": "Europe/Lisbon",
+    "geo-location": {
+      "hierarchy": "Europe/Lisbon/Vila Nova de Gaia",
+      "coordinates": {
+        "latitude": 41.1214256,
+        "longitude": -8.6080715
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3",
+      "Label 4",
+      "Label 5",
+      "Label 6"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      },
+      {
+        "id": 2,
+        "name": "Exit Door 2"
+      },
+      {
+        "id": 3,
+        "name": "Exit Door 3"
+      },
+      {
+        "id": 4,
+        "name": "Exit Door 4"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode12",
+    "name": "Site Name 12",
+    "timezone": "Asia/Jakarta",
+    "geo-location": {
+      "hierarchy": "Asia/Jakarta/Krajan",
+      "coordinates": {
+        "latitude": -7.5450262,
+        "longitude": 111.6556388
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      },
+      {
+        "id": 2,
+        "name": "Exit Door 2"
+      },
+      {
+        "id": 3,
+        "name": "Exit Door 3"
+      },
+      {
+        "id": 4,
+        "name": "Exit Door 4"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode13",
+    "name": "Site Name 13",
+    "timezone": "America/Bogota",
+    "geo-location": {
+      "hierarchy": "America/Bogota/Landázuri",
+      "coordinates": {
+        "latitude": 6.2194589,
+        "longitude": -73.809258
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3",
+      "Label 4",
+      "Label 5"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      },
+      {
+        "id": 2,
+        "name": "Exit Door 2"
+      },
+      {
+        "id": 3,
+        "name": "Exit Door 3"
+      },
+      {
+        "id": 4,
+        "name": "Exit Door 4"
+      },
+      {
+        "id": 5,
+        "name": "Exit Door 5"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode14",
+    "name": "Site Name 14",
+    "timezone": "Asia/Shanghai",
+    "geo-location": {
+      "hierarchy": "Asia/Shanghai/Qinggou",
+      "coordinates": {
+        "latitude": 36.067108,
+        "longitude": 120.382609
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      }
+    ]
+  },
+  {
+    "code": "SiteCode15",
+    "name": "Site Name 15",
+    "timezone": "Asia/Shanghai",
+    "geo-location": {
+      "hierarchy": "Asia/Shanghai/Anfeng",
+      "coordinates": {
+        "latitude": 26.888665,
+        "longitude": 112.616612
+      }
+    },
+    "labels": [
+      "Label 1",
+      "Label 2",
+      "Label 3"
+    ],
+    "exit-doors": [
+      {
+        "id": 1,
+        "name": "Exit Door 1"
+      },
+      {
+        "id": 2,
+        "name": "Exit Door 2"
+      }
+    ]
+  }
+]

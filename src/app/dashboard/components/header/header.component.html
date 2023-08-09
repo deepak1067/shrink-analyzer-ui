@@ -1,0 +1,31 @@
+<header>
+  <mat-toolbar class="mainToolbar">
+    <div class="logobox">
+      <img src="assets/images/Sensormatic%20IQ%20logo.jpg" alt="logo" />
+      <span class="divider">|</span>
+      <span class="logo-title text-uppercase fs-4">Shrink Analyzer</span>
+    </div>
+    <span class="toolbar-spacer"></span>
+    <div class="user-profile">
+      <div *ngIf="userInfo.displayName" class="user-profile-image">
+        {{ getShortName(userInfo.displayName) | uppercase}}
+      </div>
+      <div mat-icon-button [matMenuTriggerFor]="menu" class="user-profile-name">
+        <span>{{ userInfo.displayName | titlecase}}</span>
+        <mat-icon aria-hidden="false" aria-label="down arrow icon"
+          >keyboard_arrow_down</mat-icon
+        >
+      </div>
+      <mat-menu #menu="matMenu" class="mt-3 ms-4 menu">
+
+        <button mat-menu-item  (click)="openUserPreferences()">
+          <span>User preferences</span>
+        </button>
+
+        <button mat-menu-item (click)="logout()">
+          <span>Log Out</span>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+</header>

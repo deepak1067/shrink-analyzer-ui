@@ -1,0 +1,25 @@
+<mat-dialog-content class="user-preferences-dialog-content">
+    <h2 class="fw-bold">My Account</h2>
+    <hr class="line"/>
+    <h3>Preferences</h3>
+    <div class="user-info">
+        <p class="fw-bold">CURRENT USER</p> {{ displayName }}
+    </div>
+    <div class="language mb-5">
+        <p class="fw-bold">LANGUAGE</p>
+        <mat-form-field appearance="fill">
+            <mat-label>Select Language</mat-label>
+            <mat-select [(ngModel)]="selectedLanguage" (selectionChange)="onApply($event.value)">
+                <mat-option *ngFor="let language of supportedLanguages" [value]="language.value">
+                    {{ language.label }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions class="app-buttons action-buttons mb-4">
+    <button mat-flat-button class="mx-1 outlined-button" mat-dialog-close>
+        <span class="d-flex align-items-center">CLOSE&nbsp;<i class="material-icons">close</i></span>
+    </button>
+    <button mat-button class="filled-button save-btn px-2 mx-2" (click)="onSave()">SAVE</button>
+</mat-dialog-actions>

@@ -1,0 +1,22 @@
+<div class="px-5 mb-4">
+    <mat-card class="px-2 py-1 mx-4">
+        <div class="py-4">
+            <div class="d-flex mx-5 justify-content-end">
+                <button class="downloadButton" (click)="downloadCSVFile()">
+                    <i class="material-icons icon">download</i>
+                </button>
+            </div>
+            <ng-container *ngIf="!isLoading; else showLoading">
+                <app-tabular-view [tableRows]="epcReadList" [tableHeaders]="epcColumnDef">
+               </app-tabular-view>
+            </ng-container>
+            <ng-template #showLoading>
+              <div class="spinner mt-5">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="sr-only"></span>
+                </div>
+              </div>
+            </ng-template>
+        </div>
+    </mat-card>
+</div>

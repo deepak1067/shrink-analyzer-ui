@@ -1,0 +1,17 @@
+:host ::ng-deep .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background {
+    border-color: #ffffff;
+    background-color: #00539e;
+}
+
+.table-view{
+    width: 100%; 
+}
+
+.mat-select {
+    float: right;
+}
+
+.mat-select-trigger {
+    height: 12px;
+    line-height: 12px; /* Adjust the line-height if needed */
+}

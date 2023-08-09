@@ -1,0 +1,44 @@
+[
+  {
+    "day-of-week": 0,
+    "shrink-event-count": 664,
+    "bulk-event-count": 149,
+    "sweetheart-count": 491
+  },
+  {
+    "day-of-week": 1,
+    "shrink-event-count": 67,
+    "bulk-event-count": 175,
+    "sweetheart-count": 910
+  },
+  {
+    "day-of-week": 2,
+    "shrink-event-count": 803,
+    "bulk-event-count": 938,
+    "sweetheart-count": 767
+  },
+  {
+    "day-of-week": 3,
+    "shrink-event-count": 860,
+    "bulk-event-count": 38,
+    "sweetheart-count": 940
+  },
+  {
+    "day-of-week": 4,
+    "shrink-event-count": 283,
+    "bulk-event-count": 835,
+    "sweetheart-count": 719
+  },
+  {
+    "day-of-week": 5,
+    "shrink-event-count": 485,
+    "bulk-event-count": 683,
+    "sweetheart-count": 675
+  },
+  {
+    "day-of-week": 6,
+    "shrink-event-count": 853,
+    "bulk-event-count": 316,
+    "sweetheart-count": 980
+  }
+]
